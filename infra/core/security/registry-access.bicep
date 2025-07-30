@@ -1,4 +1,12 @@
-metadata description = 'Assigns ACR Pull permissions to access an Azure Container Registry.'
+
+
+@metadata({
+  description: 'Assigns ACR Pull permissions to access an Azure Container Registry.'
+  requiredResources: [
+    'Microsoft.Authorization/roleAssignments'
+  ]
+})
+
 param containerRegistryName string
 param principalId string
 

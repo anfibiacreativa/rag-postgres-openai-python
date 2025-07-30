@@ -1,3 +1,19 @@
+
+
+
+@metadata({
+  description: 'Creates an Azure Database for PostgreSQL Flexible Server.'
+  requiredResources: [
+    
+    'Microsoft.DBforPostgreSQL/flexibleServers'
+    'Microsoft.DBforPostgreSQL/flexibleServers/databases'
+    'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules'
+    'Microsoft.DBforPostgreSQL/flexibleServers/administrators'
+    'Microsoft.DBforPostgreSQL/flexibleServers/configurations'
+  
+  ]
+})
+
 param name string
 param location string = resourceGroup().location
 param tags object = {}

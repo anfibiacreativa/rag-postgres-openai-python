@@ -1,3 +1,16 @@
+
+
+
+@metadata({
+  description: 'Creates a web container app with managed identity.'
+  requiredResources: [
+    
+    'Microsoft.ManagedIdentity/userAssignedIdentities'
+    'Microsoft.App/containerApps'
+  
+  ]
+})
+
 param name string
 param location string = resourceGroup().location
 param tags object = {}

@@ -1,4 +1,12 @@
-metadata description = 'Creates an Application Insights instance based on an existing Log Analytics workspace.'
+
+
+@metadata({
+  description: 'Creates an Application Insights instance based on an existing Log Analytics workspace.'
+  requiredResources: [
+    'Microsoft.Insights/components'
+  ]
+})
+
 param name string
 param location string = resourceGroup().location
 param tags object = {}
