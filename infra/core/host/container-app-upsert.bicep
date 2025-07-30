@@ -1,4 +1,12 @@
-metadata description = 'Creates or updates an existing Azure Container App.'
+
+
+@metadata({
+  description: 'Creates or updates an existing Azure Container App.'
+  requiredResources: [
+    'Microsoft.App/containerApps'
+  ]
+})
+
 param name string
 param location string = resourceGroup().location
 param tags object = {}

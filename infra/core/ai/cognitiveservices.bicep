@@ -1,4 +1,12 @@
-metadata description = 'Creates an Azure Cognitive Services instance.'
+
+
+@metadata({
+  description: 'Creates an Azure Cognitive Services instance.'
+  requiredResources: [
+    'Microsoft.CognitiveServices/accounts'
+  ]
+})
+
 param name string
 param location string = resourceGroup().location
 param tags object = {}

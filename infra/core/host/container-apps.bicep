@@ -1,4 +1,15 @@
-metadata description = 'Creates an Azure Container Registry and an Azure Container Apps environment.'
+
+
+@metadata({
+  description: 'Creates an Azure Container Registry and an Azure Container Apps environment.'
+  requiredResources: [
+    
+    'Microsoft.ContainerRegistry/registries'
+    'Microsoft.App/managedEnvironments'
+  
+  ]
+})
+
 param name string
 param location string = resourceGroup().location
 param tags object = {}

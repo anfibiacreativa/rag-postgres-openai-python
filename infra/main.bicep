@@ -1,5 +1,27 @@
 targetScope = 'subscription'
 
+
+
+
+
+@metadata({
+  description: 'Main deployment template for RAG PostgreSQL OpenAI application infrastructure.'
+  requiredResources: [
+    
+    'Microsoft.Resources/resourceGroups'
+    'Microsoft.CognitiveServices/accounts'
+    'Microsoft.DBforPostgreSQL/flexibleServers'
+    'Microsoft.ContainerRegistry/registries'
+    'Microsoft.App/managedEnvironments'
+    'Microsoft.App/containerApps'
+    'Microsoft.OperationalInsights/workspaces'
+    'Microsoft.Insights/components'
+    'Microsoft.ManagedIdentity/userAssignedIdentities'
+    'Microsoft.Authorization/roleAssignments'
+  
+  ]
+})
+
 @minLength(1)
 @maxLength(64)
 @description('Name which is used to generate a short unique hash for each resource')
@@ -43,11 +65,7 @@ param principalId string = ''
   'westus'
   'westus3'
 ])
-@metadata({
-  azd: {
-    type: 'location'
-  }
-})
+
 param openAILocation string
 
 @description('Name of the OpenAI resource group. If not specified, the resource group name will be generated.')

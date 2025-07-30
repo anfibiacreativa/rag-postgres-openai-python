@@ -1,3 +1,19 @@
+
+
+
+@metadata({
+  description: 'Creates an Azure AI Foundry resource with projects and connections.'
+  requiredResources: [
+    
+    'Microsoft.CognitiveServices/accounts'
+    'Microsoft.CognitiveServices/accounts/projects'
+    'Microsoft.Storage/storageAccounts'
+    'Microsoft.CognitiveServices/accounts/connections'
+    'Microsoft.Authorization/roleAssignments'
+  
+  ]
+})
+
 @minLength(1)
 @description('Primary location for all resources')
 param location string

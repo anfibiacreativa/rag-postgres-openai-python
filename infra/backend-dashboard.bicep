@@ -1,4 +1,12 @@
-metadata description = 'Creates a dashboard for an Application Insights instance.'
+
+
+@metadata({
+  description: 'Creates a dashboard for an Application Insights instance.'
+  requiredResources: [
+    'Microsoft.Portal/dashboards'
+  ]
+})
+
 param name string
 param applicationInsightsName string
 param location string = resourceGroup().location
