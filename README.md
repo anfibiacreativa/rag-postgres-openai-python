@@ -29,11 +29,25 @@ This project provides the following features:
 
 ![Screenshot of chat app with question about climbing gear](docs/images/screenshot_chat.png)
 
-## Architecture diagram
+## Architecture
 
 The deployed app uses a user-assigned managed identity to authenticate to Azure services, and stores logs in Log Analytics.
 
 ![Architecture diagram: Azure Container Apps, Azure Container Registry, Managed Identity, Azure OpenAI, Azure Database for PostgreSQL](docs/images/azure_architecture.png)
+
+## Prerequisites
+
+To use this template, you'll need:
+
+* [Azure Developer CLI (azd)](https://aka.ms/install-azd)
+* [Node.js 18+](https://nodejs.org/download/)
+* [Python 3.10+](https://www.python.org/downloads/)
+* [PostgreSQL 14+](https://www.postgresql.org/download/) (for local development)
+* [pgvector](https://github.com/pgvector/pgvector) (PostgreSQL extension)
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+* [Git](https://git-scm.com/downloads)
+
+An Azure subscription is required for deployment.
 
 ## Getting started
 
